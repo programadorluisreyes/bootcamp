@@ -1,0 +1,12 @@
+name: display two messages
+on:
+  pull_request:
+    types: [review_requested]
+jobs:
+  display-2-messages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display-variable
+        run: echo "my variable is:$VARIABLE"
+        env: 
+          VARIABLE: '12345'
