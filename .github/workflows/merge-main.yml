@@ -1,6 +1,6 @@
 name: display two messages
 on:
-  pull_request:
+  push:
     branches: 
       -main
 jobs:
