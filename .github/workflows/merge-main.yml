@@ -1,11 +1,15 @@
 name: display two messages
 on:
   pull_request:
-    types: [review_requested]
+    branches: 
+      -main
 jobs:
   display-2-messages:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: display-variable
         run: echo "my variable is:$VARIABLE"
         env: 
