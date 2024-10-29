@@ -2,7 +2,7 @@ name: display two messages
 on:
   push:
     branches: 
-      -main
+      - main
 jobs:
   display-2-messages:
     runs-on: ubuntu-latest
