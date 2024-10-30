@@ -12,6 +12,7 @@ jobs:
 
       - name: display-variable
         run: | 
-          echo "my variable is:$VARIABLE"
+          echo "my variable is:$VARIABLE and secret password is ${{ PASS }}"
         env: 
           VARIABLE: '12345'
+          PASS: ${{ secrets.PASSWORD }}
